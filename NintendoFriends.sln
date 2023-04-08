@@ -3,9 +3,52 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{78703E9A-C078-4B0D-BF8D-9386590F6588}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NintendoFriends.WPF", "NintendoFriends.WPF\NintendoFriends.WPF.csproj", "{A039CF99-550F-4A9F-B151-8EBE67660EEA}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "NintendoFriends.Database", "NintendoFriends.Database\NintendoFriends.Database.sqlproj", "{5297189C-116B-4F12-AF55-2757712BA0FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NintendoFriends.DataAccess", "NintendoFriends.DataAccess\NintendoFriends.DataAccess.csproj", "{8A29065F-7A7F-4549-95EE-C9E436434E1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NintendoFriends.Domain", "NintendoFriends.Domain\NintendoFriends.Domain.csproj", "{03F257A7-23EA-4811-B500-5156A8D033FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NintendoFriends.DataAccess.Tests", "NintendoFriends.DataAccess.Tests\NintendoFriends.DataAccess.Tests.csproj", "{3D3F4E5F-E51A-49AF-81F4-5C7E418A701A}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A039CF99-550F-4A9F-B151-8EBE67660EEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A039CF99-550F-4A9F-B151-8EBE67660EEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A039CF99-550F-4A9F-B151-8EBE67660EEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A039CF99-550F-4A9F-B151-8EBE67660EEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5297189C-116B-4F12-AF55-2757712BA0FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5297189C-116B-4F12-AF55-2757712BA0FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5297189C-116B-4F12-AF55-2757712BA0FB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{5297189C-116B-4F12-AF55-2757712BA0FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5297189C-116B-4F12-AF55-2757712BA0FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5297189C-116B-4F12-AF55-2757712BA0FB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8A29065F-7A7F-4549-95EE-C9E436434E1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A29065F-7A7F-4549-95EE-C9E436434E1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A29065F-7A7F-4549-95EE-C9E436434E1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A29065F-7A7F-4549-95EE-C9E436434E1B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03F257A7-23EA-4811-B500-5156A8D033FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03F257A7-23EA-4811-B500-5156A8D033FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03F257A7-23EA-4811-B500-5156A8D033FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03F257A7-23EA-4811-B500-5156A8D033FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D3F4E5F-E51A-49AF-81F4-5C7E418A701A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D3F4E5F-E51A-49AF-81F4-5C7E418A701A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D3F4E5F-E51A-49AF-81F4-5C7E418A701A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D3F4E5F-E51A-49AF-81F4-5C7E418A701A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3D3F4E5F-E51A-49AF-81F4-5C7E418A701A} = {78703E9A-C078-4B0D-BF8D-9386590F6588}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0F77E2E2-DB82-4B4A-A6B9-30B7F3A706DD}
