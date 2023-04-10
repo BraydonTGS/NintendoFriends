@@ -2,7 +2,6 @@
     x:Class="NintendoFriends.WPF.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:NintendoFriends.WPF"
-    StartupUri="MainWindow.xaml">
+    xmlns:local="clr-namespace:NintendoFriends.WPF">
     <Application.Resources />
 </Application>
