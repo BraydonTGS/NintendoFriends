@@ -1,0 +1,76 @@
+﻿<UserControl
+    x:Class="NintendoFriends.WPF.Views.NintendoFriendsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:components="clr-namespace:NintendoFriends.WPF.Components"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:NintendoFriends.WPF.Views"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="600"
+    d:DesignWidth="1000"
+    Background="Transparent"
+    mc:Ignorable="d">
+
+    <!--  Main Window  -->
+    <Border BorderThickness="5" CornerRadius="20">
+        <!--  Main Window Border Brush Gradient  -->
+        <Border.BorderBrush>
+            <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                <GradientStop Offset="0" Color="#FFA401" />
+                <GradientStop Offset=".75" Color="#FF7701" />
+                <GradientStop Offset="1" Color="#FF3602" />
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <!--  Main Window Background Gradient  -->
+        <Border.Background>
+            <LinearGradientBrush StartPoint="0, 1" EndPoint="1, 0">
+                <GradientStop Offset="0" Color="#86000B" />
+                <GradientStop Offset="0.75" Color="#E00012" />
+            </LinearGradientBrush>
+        </Border.Background>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <!--  Title and Add Button  -->
+            <TextBlock
+                Margin="10"
+                Padding="10"
+                Grid.Column="0"
+                FontSize="40"
+                Foreground="#FFF"
+                Text="Nintendo Friends List" />
+
+            <Button
+                Grid.Column="1"
+                Padding="15, 5"
+                Width="100"
+                Height="40"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Content="Add"
+                Margin="10"
+                FontSize="20" />
+
+            <Grid Grid.Row="1" Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <!--  Components  -->
+                <components:FriendsList Background="Transparent" Grid.Column="0" Margin="0,0,20,0" />
+                <components:FriendDetails Background="Transparent" Grid.Column="1" />
+            </Grid>
+        </Grid>
+
+    </Border>
+</UserControl>

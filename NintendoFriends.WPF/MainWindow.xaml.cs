@@ -9,5 +9,10 @@ namespace NintendoFriends.WPF
         {
             InitializeComponent();
         }
+
+        private void Window_MouseDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
     }
 }

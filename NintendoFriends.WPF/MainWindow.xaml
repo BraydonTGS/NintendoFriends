@@ -6,12 +6,17 @@
     xmlns:local="clr-namespace:NintendoFriends.WPF"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:views="clr-namespace:NintendoFriends.WPF.Views"
-    Title="Nintendo Friends List"
-    Width="800"
-    Height="450"
+    Width="1000"
+    Height="600"
+    AllowsTransparency="True"
+    Background="Transparent"
     FontSize="14"
+    MouseDown="Window_MouseDown"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
     mc:Ignorable="d">
-    <Grid Margin="25, 15, 25, 25">
+    <Grid>
         <views:NintendoFriendsView />
     </Grid>
 </Window>
