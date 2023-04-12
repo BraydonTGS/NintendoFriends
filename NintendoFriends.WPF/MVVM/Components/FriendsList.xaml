@@ -18,7 +18,7 @@
         <ListView>
             <ListView.Style>
                 <Style TargetType="{x:Type ListView}">
-                    <Setter Property="Background" Value="#EDEDED" />
+                    <Setter Property="Background" Value="#00A1DC" />
                     <Setter Property="Padding" Value="10" />
                     <Setter Property="Margin" Value="10" />
                     <Setter Property="BorderThickness" Value="0" />

@@ -12,7 +12,7 @@
     <Border
         Margin="10"
         Padding="10"
-        Background="#EDEDED"
+        Background="#00A1DC"
         BorderBrush="#86000B"
         BorderThickness="5"
         CornerRadius="20"
