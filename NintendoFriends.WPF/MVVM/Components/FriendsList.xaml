@@ -11,14 +11,14 @@
 
     <Border
         Margin="10"
-        Background="#FFA401"
-        BorderBrush="#86000B"
+        Background="#FFF"
+        BorderBrush="#00A1DC"
         BorderThickness="5"
         CornerRadius="20">
         <ListView>
             <ListView.Style>
                 <Style TargetType="{x:Type ListView}">
-                    <Setter Property="Background" Value="#00A1DC" />
+                    <Setter Property="Background" Value="#FFF" />
                     <Setter Property="Padding" Value="10" />
                     <Setter Property="Margin" Value="10" />
                     <Setter Property="BorderThickness" Value="0" />

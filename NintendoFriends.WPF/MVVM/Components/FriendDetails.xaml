@@ -12,8 +12,8 @@
     <Border
         Margin="10"
         Padding="10"
-        Background="#00A1DC"
-        BorderBrush="#86000B"
+        Background="#fff"
+        BorderBrush="#00A1DC"
         BorderThickness="5"
         CornerRadius="20"
         SnapsToDevicePixels="True">

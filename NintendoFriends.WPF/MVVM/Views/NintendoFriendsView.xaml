@@ -21,6 +21,7 @@
                 <GradientStop Offset="1" Color="#FF3602" />
             </LinearGradientBrush>
         </Border.BorderBrush>
+
         <!--  Main Window Background Gradient  -->
         <Border.Background>
             <LinearGradientBrush StartPoint="0, 1" EndPoint="1, 0">
@@ -42,33 +43,57 @@
             </Grid>
             <!--  Title and Add Button  -->
             <TextBlock
-                Margin="10"
-                Padding="10"
                 Grid.Column="0"
+                Margin="10"
+                FontWeight="Bold"
+                Padding="10"
                 FontSize="40"
                 Foreground="#FFF"
                 Text="Nintendo Friends List" />
 
-            <Button
+            <!--  Login Button  -->
+            <Border
+                x:Name="btnClose"
                 Grid.Column="1"
-                Padding="15, 5"
                 Width="100"
-                Height="40"
+                Height="50"
+                Margin="10"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
-                Content="Add"
-                Margin="10"
-                FontSize="20" />
+                CornerRadius="25"
+                Cursor="Hand">
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="#FF7701" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#00A1DC" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Text="Add" />
+            </Border>
 
-            <Grid Grid.Row="1" Margin="0,20,0,0">
+            <Grid Grid.Row="1" Margin="0,5,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
 
                 <!--  Components  -->
-                <components:FriendsList Background="Transparent" Grid.Column="0" Margin="0,0,20,0" />
-                <components:FriendDetails Background="Transparent" Grid.Column="1" />
+                <components:FriendsList
+                    Grid.Column="0"
+                    Margin="0,0,20,0"
+                    Background="Transparent" />
+                <components:FriendDetails Grid.Column="1" Background="Transparent" />
             </Grid>
         </Grid>
 
