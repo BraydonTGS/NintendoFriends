@@ -10,7 +10,6 @@
     d:DesignWidth="1000"
     Background="Transparent"
     mc:Ignorable="d">
-
     <!--  Main Window  -->
     <Border BorderThickness="5" CornerRadius="20">
         <!--  Main Window Border Brush Gradient  -->
@@ -52,26 +51,7 @@
                 Text="Nintendo Friends List" />
 
             <!--  Login Button  -->
-            <Border
-                x:Name="btnClose"
-                Grid.Column="1"
-                Width="100"
-                Height="50"
-                Margin="10"
-                HorizontalAlignment="Right"
-                VerticalAlignment="Center"
-                CornerRadius="25"
-                Cursor="Hand">
-                <Border.Style>
-                    <Style TargetType="Border">
-                        <Setter Property="Background" Value="#FF7701" />
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Background" Value="#00A1DC" />
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Border.Style>
+            <Border Style="{StaticResource ButtonTheme}">
                 <TextBlock
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
