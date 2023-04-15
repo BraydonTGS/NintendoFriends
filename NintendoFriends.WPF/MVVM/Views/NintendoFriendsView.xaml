@@ -5,7 +5,7 @@
     xmlns:components="clr-namespace:NintendoFriends.WPF.Components"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:NintendoFriends.WPF.Views"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodels="clr-namespace:NintendoFriends.WPF.MVVM.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:NintendoFriendsViewModel}"
     d:DesignHeight="600"
     d:DesignWidth="1000"
     Background="Transparent"
@@ -59,7 +59,8 @@
                     FontSize="20"
                     FontWeight="Bold"
                     Foreground="White"
-                    Text="Add" />
+                    Text="Add"
+                    />
             </Border>
 
             <Grid Grid.Row="1" Margin="0,5,0,0">
@@ -72,8 +73,10 @@
                 <components:FriendsList
                     Grid.Column="0"
                     Margin="0,0,20,0"
-                    Background="Transparent" />
-                <components:FriendDetails Grid.Column="1" Background="Transparent" />
+                    Background="Transparent"
+                    DataContext="{Binding FriendsListViewModel}"/>
+                <components:FriendDetails Grid.Column="1" Background="Transparent" 
+                                          DataContext="{Binding FriendDetailsViewModel}"/>
             </Grid>
         </Grid>
 

@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using NintendoFriends.WPF.MVVM.ViewModels;
+using System.Windows;
 
 namespace NintendoFriends.WPF
 {
@@ -7,7 +8,12 @@ namespace NintendoFriends.WPF
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            MainWindow = new MainWindow();
+            MainWindow = new MainWindow()
+            {
+                DataContext = new NintendoFriendsViewModel()
+            };
+
+
             MainWindow.Show();
             base.OnStartup(e);
         }

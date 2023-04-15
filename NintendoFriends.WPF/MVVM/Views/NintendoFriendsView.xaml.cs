@@ -8,5 +8,6 @@ namespace NintendoFriends.WPF.Views
         {
             InitializeComponent();
         }
+
     }
 }
