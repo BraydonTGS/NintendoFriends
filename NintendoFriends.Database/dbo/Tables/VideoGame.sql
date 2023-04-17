@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[VideoGame]
+(
+	[Id] INT NOT NULL PRIMARY KEY CLUSTERED IDENTITY(1, 1), 
+	[Title] NVARCHAR(100) NOT NULL, 
+	[Publisher] NVARCHAR(50) NOT NULL,
+)
