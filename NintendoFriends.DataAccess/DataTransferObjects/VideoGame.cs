@@ -6,5 +6,6 @@
         public string Title { get; set; } = string.Empty;
         public string Publisher { get; set; } = string.Empty; 
         public string Description { get; set; } = string.Empty;
+        public IEnumerable<VideoGameSystem> GameSystems { get; set; } = Enumerable.Empty<VideoGameSystem>();
     }
 }
