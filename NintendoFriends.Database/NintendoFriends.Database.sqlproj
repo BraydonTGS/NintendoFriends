@@ -69,6 +69,11 @@
     <Build Include="dbo\Tables\FriendsVideoGame.sql" />
     <Build Include="dbo\Tables\System.sql" />
     <Build Include="dbo\Tables\VideoGameSystem.sql" />
+    <Build Include="dbo\StoredProcedures\spFriend_GetAll.sql" />
+    <Build Include="dbo\StoredProcedures\spFriend_Get.sql" />
+    <Build Include="dbo\StoredProcedures\spFriend_Insert.sql" />
+    <Build Include="dbo\StoredProcedures\spFriend_Update.sql" />
+    <Build Include="dbo\StoredProcedures\spFriend_Delete.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="PublishLocations\NintendoFriends.Database.publish.xml" />

@@ -6,6 +6,8 @@
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty; 
         public string Username { get; set; } = string.Empty;    
+        public string BestFriend { get; set; } = string.Empty;  
+        public string Online { get ; set; } = string.Empty; 
         public IEnumerable<VideoGame> VideoGames { get; set; } = Enumerable.Empty<VideoGame>();
     }
 }
