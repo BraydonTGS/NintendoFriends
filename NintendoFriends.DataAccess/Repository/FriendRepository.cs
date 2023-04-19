@@ -14,7 +14,7 @@ namespace NintendoFriends.DataAccess.Repository
 
         public async Task<IEnumerable<FriendDto>> GetAllAsync() => await _repo.LoadData<FriendDto>(storedProcedure: "dbo.spFriend_GetAll");
 
-        public async Task<FriendDto?> GetUserByIdAsync(int id)
+        public async Task<FriendDto?> GetFriendByIdAsync(int id)
         {
             var result = await _repo.LoadData<FriendDto>(storedProcedure: "dbo.spFriend_Get", new { id });
             var user = result.FirstOrDefault();
@@ -24,9 +24,9 @@ namespace NintendoFriends.DataAccess.Repository
             }
             return null;
         }
-        public async Task<bool> DeleteUserAsync(int id) => await _repo.SaveData<FriendDto>(storedProcedure: "dbo.spFriend_Delete", new { id });
+        public async Task<bool> DeleteFriendAsync(int id) => await _repo.SaveData<FriendDto>(storedProcedure: "dbo.spFriend_Delete", new { id });
 
-        public async Task<bool> InsertUserAsync(FriendDto friend)
+        public async Task<bool> InsertFriendAsync(FriendDto friend)
         {
             try
             {
@@ -39,7 +39,7 @@ namespace NintendoFriends.DataAccess.Repository
             }
         }
 
-        public async Task<bool> UpdateUserAsync(FriendDto friend)
+        public async Task<bool> UpdateFriendAsync(FriendDto friend)
         {
             try
             {
