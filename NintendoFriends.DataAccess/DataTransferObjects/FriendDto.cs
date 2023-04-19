@@ -8,6 +8,6 @@
         public string Username { get; set; } = string.Empty;    
         public string BestFriend { get; set; } = string.Empty;  
         public string Online { get ; set; } = string.Empty; 
-        public IEnumerable<VideoGameDto> VideoGames { get; set; } = Enumerable.Empty<VideoGameDto>();
+
     }
 }

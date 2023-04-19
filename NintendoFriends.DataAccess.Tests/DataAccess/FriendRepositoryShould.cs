@@ -80,5 +80,22 @@ namespace NintendoFriends.DataAccess.Tests.DataAccess
             // Assert //
             Assert.True(results);
         }
+
+        [Fact]
+       public async Task DeleteFriend_ShouldReturnTrue()
+        {
+            // Act //
+            var friends = await _friendRepository.GetAllAsync(); 
+            var userToDelete = friends?.FirstOrDefault();
+
+            // Assert //
+            Assert.NotNull(userToDelete);
+
+            // Act //
+            var result = await _friendRepository.DeleteFriendAsync(userToDelete.Id);
+
+            // Assert //
+            Assert.True(result); 
+        }
     }
 }

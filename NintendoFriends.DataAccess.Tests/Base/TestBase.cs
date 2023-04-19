@@ -33,7 +33,7 @@ namespace NintendoFriends.DataAccess.Tests.Base
         #region Seed Test Db
         protected static FriendDto CreateSingleMockFriend()
         {
-            var newFriend = new FriendDto() { FirstName = "Braydon", LastName = "Sutherland", Username = "xGeoMaticx", BestFriend = "Yes", Online = "NO" };
+            var newFriend = new FriendDto() { FirstName = "Braydon", LastName = "Sutherland", Username = "xGeoMaticx", BestFriend = "Yes", Online = "No" };
             return newFriend;
 
         }
@@ -41,7 +41,7 @@ namespace NintendoFriends.DataAccess.Tests.Base
         {
             _friends = new List<FriendDto>()
             {
-                new FriendDto() {FirstName = "Braydon", LastName = "Sutherland", Username = "GeoMatics", BestFriend = "Yes", Online = "NO"},
+                new FriendDto() {FirstName = "Braydon", LastName = "Sutherland", Username = "GeoMatics", BestFriend = "Yes", Online = "No"},
                 new FriendDto() {FirstName = "Sally", LastName = "Sutherland", Username = "Salmeaux", BestFriend = "Yes", Online = "Yes"},
                 new FriendDto() {FirstName = "Colin", LastName = "Sutherland", Username = "CWallyWongs", BestFriend = "Yes", Online = "Yes"},
                 new FriendDto() {FirstName = "Chase", LastName = "Iguieri", Username = "ChapsDonWaldo", BestFriend = "Yes", Online = "Yes"},
