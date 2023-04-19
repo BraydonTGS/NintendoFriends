@@ -22,4 +22,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NintendoFriends.DataAccess\NintendoFriends.DataAccess.csproj" />
+  </ItemGroup>
+
 </Project>
