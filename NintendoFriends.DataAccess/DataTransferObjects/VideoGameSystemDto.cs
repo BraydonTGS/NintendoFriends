@@ -1,6 +1,6 @@
 ﻿namespace NintendoFriends.DataAccess.DataTransferObjects
 {
-    public class VideoGameSystem
+    public class VideoGameSystemDto
     {
         public int Id { get; set; }
         public string Make { get; set; } = string.Empty;

@@ -1,6 +1,6 @@
 ﻿namespace NintendoFriends.DataAccess.DataTransferObjects
 {
-    public class Friend
+    public class FriendDto
     {
         public int Id { get; set; }
         public string FirstName { get; set; } = string.Empty;
@@ -8,6 +8,6 @@
         public string Username { get; set; } = string.Empty;    
         public string BestFriend { get; set; } = string.Empty;  
         public string Online { get ; set; } = string.Empty; 
-        public IEnumerable<VideoGame> VideoGames { get; set; } = Enumerable.Empty<VideoGame>();
+        public IEnumerable<VideoGameDto> VideoGames { get; set; } = Enumerable.Empty<VideoGameDto>();
     }
 }

@@ -1,11 +1,11 @@
 ﻿namespace NintendoFriends.DataAccess.DataTransferObjects
 {
-    public class VideoGame
+    public class VideoGameDto
     {
         public int Id { get; set; } 
         public string Title { get; set; } = string.Empty;
         public string Publisher { get; set; } = string.Empty; 
         public string Description { get; set; } = string.Empty;
-        public IEnumerable<VideoGameSystem> GameSystems { get; set; } = Enumerable.Empty<VideoGameSystem>();
+        public IEnumerable<VideoGameSystemDto> GameSystems { get; set; } = Enumerable.Empty<VideoGameSystemDto>();
     }
 }
