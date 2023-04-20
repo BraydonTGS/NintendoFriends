@@ -17,7 +17,7 @@
         BorderThickness="5"
         CornerRadius="20">
         <!--  Username Listing  -->
-        <ListView ItemsSource="{Binding FriendListingViewModels}">
+        <ListView ItemsSource="{Binding FriendListingViewModels}" SelectedItem="{Binding SelectedFriendListingViewModel}">
             <ListView.Style>
                 <Style TargetType="{x:Type ListView}">
                     <Setter Property="Padding" Value="10" />

@@ -10,5 +10,7 @@ namespace NintendoFriends.WPF.MVVM.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        protected virtual void Dispose() { }
     }
 }

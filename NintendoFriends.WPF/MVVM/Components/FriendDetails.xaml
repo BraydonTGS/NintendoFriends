@@ -49,6 +49,7 @@
                 <TextBlock
                     Grid.Column="1"
                     Margin="20,0,0,0"
+                    FontWeight="Bold"
                     FontSize="25"
                     Text="{Binding IsBestFriendDisplay}" />
             </Grid>
@@ -67,6 +68,7 @@
                 <TextBlock
                     Grid.Column="1"
                     Margin="20,0,0,0"
+                    FontWeight="Bold"
                     FontSize="25"
                     Text="{Binding IsOnlineDisplay}" />
 
@@ -85,6 +87,7 @@
                 <TextBlock
                     Grid.Column="1"
                     Margin="20,0,0,0"
+                    FontWeight="Bold"
                     FontSize="25"
                     Text="{Binding FavoriteGame}" />
 
