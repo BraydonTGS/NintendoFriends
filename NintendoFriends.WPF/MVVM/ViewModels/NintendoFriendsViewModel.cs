@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography.Xml;
+﻿using NintendoFriends.WPF.Stores;
+using System.Security.Cryptography.Xml;
 using System.Windows.Input;
 
 namespace NintendoFriends.WPF.MVVM.ViewModels
@@ -12,10 +13,10 @@ namespace NintendoFriends.WPF.MVVM.ViewModels
         public FriendDetailsViewModel FriendDetailsViewModel { get; }
         public FriendsListViewModel FriendsListViewModel { get; }
 
-        public NintendoFriendsViewModel()
+        public NintendoFriendsViewModel(SelectedFriendStore _selectedStore)
         {
-            FriendDetailsViewModel = new FriendDetailsViewModel();
-            FriendsListViewModel = new FriendsListViewModel();
+            FriendDetailsViewModel = new FriendDetailsViewModel(_selectedStore);
+            FriendsListViewModel = new FriendsListViewModel(_selectedStore);
         }
     }
 }

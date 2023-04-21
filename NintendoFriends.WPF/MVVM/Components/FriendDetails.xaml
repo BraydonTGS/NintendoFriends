@@ -17,71 +17,112 @@
         BorderThickness="5"
         CornerRadius="20"
         SnapsToDevicePixels="True">
-        <!--  Main Grid  -->
-        <Grid Grid.IsSharedSizeScope="True">
-
-            <!--  3 Rows  -->
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="auto" />
-            </Grid.RowDefinitions>
-
-            <!--  Username  -->
-            <TextBlock
-                Grid.Row="0"
-                FontSize="25"
-                Text="Braydon" />
-
-            <!--  Friend Details  -->
-            <Grid Grid.Row="1" Margin="0,20,0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" SharedSizeGroup="Label" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-
+        <Grid>
+            <!-- User Selected = False -->
+            <Grid>
+                <Grid.Style>
+                    <Style TargetType="Grid">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding HasSelectedFriend}" Value="False">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
                 <TextBlock
-                    Grid.Column="0"
-                    FontWeight="Bold"
-                    Text="Best Friend?" />
-                <TextBlock
-                    Grid.Column="1"
-                    Margin="20,0,0,0"
-                    Text="Yes" />
+                    Grid.Row="0"
+                    HorizontalAlignment="Center"
+                    Margin="20"
+                    FontSize="50"
+                    Text="Please Select a Username" />
             </Grid>
+            <!--  Main Grid  -->
+            <!-- User Selected = False -->
+            <Grid Grid.IsSharedSizeScope="True">
+                <Grid.Style>
+                    <Style TargetType="Grid">
+                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding HasSelectedFriend}" Value="True">
+                                <Setter Property="Visibility" Value="Visible"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
+                
+                <!--  3 Rows  -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                    <RowDefinition Height="auto" />
+                </Grid.RowDefinitions>
 
-            <!--  Friend Details  -->
-            <Grid Grid.Row="3" Margin="0,20,0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" SharedSizeGroup="Label" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
+                <!--  Username  -->
                 <TextBlock
-                    Grid.Column="0"
-                    FontWeight="Bold"
-                    Text="Online?" />
-                <TextBlock
-                    Grid.Column="1"
-                    Margin="20,0,0,0"
-                    Text="Yes" />
+                    Grid.Row="0"
+                    FontSize="50"
+                    Text="{Binding Username}" />
 
-            </Grid>
-            <!--  Friend Details  -->
-            <Grid Grid.Row="2" Margin="0,20,0,0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" SharedSizeGroup="Label" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
-                <TextBlock
-                    Grid.Column="0"
-                    FontWeight="Bold"
-                    Text="Favorite Game?" />
-                <TextBlock
-                    Grid.Column="1"
-                    Margin="20,0,0,0"
-                    Text="Zelda" />
+                <!--  Friend Details  -->
+                <Grid Grid.Row="1" Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" SharedSizeGroup="Label" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
 
+                    <TextBlock
+                        Grid.Column="0"
+                        FontSize="25"
+                        FontWeight="Bold"
+                        Text="Best Friend?" />
+                    <TextBlock
+                        Grid.Column="1"
+                        Margin="20,0,0,0"
+                        FontSize="25"
+                        FontWeight="Bold"
+                        Text="{Binding IsBestFriendDisplay}" />
+                </Grid>
+
+                <!--  Friend Details  -->
+                <Grid Grid.Row="3" Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" SharedSizeGroup="Label" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        FontSize="25"
+                        FontWeight="Bold"
+                        Text="Online?" />
+                    <TextBlock
+                        Grid.Column="1"
+                        Margin="20,0,0,0"
+                        FontSize="25"
+                        FontWeight="Bold"
+                        Text="{Binding IsOnlineDisplay}" />
+
+                </Grid>
+                <!--  Friend Details  -->
+                <Grid Grid.Row="2" Margin="0,20,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" SharedSizeGroup="Label" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock
+                        Grid.Column="0"
+                        FontSize="25"
+                        FontWeight="Bold"
+                        Text="Favorite Game?" />
+                    <TextBlock
+                        Grid.Column="1"
+                        Margin="20,0,0,0"
+                        FontSize="25"
+                        FontWeight="Bold"
+                        Text="{Binding FavoriteGame}" />
+
+                </Grid>
             </Grid>
         </Grid>
     </Border>
