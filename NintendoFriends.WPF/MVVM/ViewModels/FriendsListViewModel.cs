@@ -8,9 +8,9 @@ namespace NintendoFriends.WPF.MVVM.ViewModels
 {
     public class FriendsListViewModel : ViewModelBase
     {
-        private readonly ObservableCollection<FriendUsernameViewModel> _friendListingViewModels;
         private readonly SelectedFriendStore _selectedStore;
-
+        private readonly ObservableCollection<FriendUsernameViewModel> _friendListingViewModels;
+      
         public IEnumerable<FriendUsernameViewModel> FriendListingViewModels => _friendListingViewModels;
 
         private FriendUsernameViewModel _selectedFriendListingViewModel;

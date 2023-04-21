@@ -11,11 +11,8 @@ namespace NintendoFriends.WPF.MVVM.Components
 
         // Commands //
         public ICommand EditCommand { get; }
-        public ICommand DeleteCommand { get; } 
+        public ICommand DeleteCommand { get; }
 
-        public FriendUsernameViewModel(Friend friend)
-        {
-            Friend = friend;
-        }
+        public FriendUsernameViewModel(Friend friend) => Friend = friend;
     }
 }

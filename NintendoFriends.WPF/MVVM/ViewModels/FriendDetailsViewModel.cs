@@ -8,8 +8,8 @@ namespace NintendoFriends.WPF.MVVM.ViewModels
         // Selected Friend Store => Source of Truth // 
         private readonly SelectedFriendStore _selectedStore;
         private Friend _selectedFriend => _selectedStore.SelectedFriend;
-        public bool HasSelectedFriend => _selectedStore != null;
-        public string? Username => _selectedFriend?.Username ?? "Please Select a User"; 
+        public bool HasSelectedFriend => _selectedStore.SelectedFriend != null;
+        public string? Username => _selectedFriend?.Username; 
         public string? IsBestFriendDisplay => _selectedFriend?.BestFriend;
         public string? IsOnlineDisplay => _selectedFriend?.Online;
         public string? FavoriteGame => _selectedFriend?.FavoriteGame;
