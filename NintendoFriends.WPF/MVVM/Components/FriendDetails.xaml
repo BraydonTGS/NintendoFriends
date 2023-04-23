@@ -18,39 +18,40 @@
         CornerRadius="20"
         SnapsToDevicePixels="True">
         <Grid>
-            <!-- User Selected = False -->
+            <!--  User Selected = False  -->
             <Grid>
                 <Grid.Style>
                     <Style TargetType="Grid">
-                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Setter Property="Visibility" Value="Collapsed" />
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding HasSelectedFriend}" Value="False">
-                                <Setter Property="Visibility" Value="Visible"/>
+                                <Setter Property="Visibility" Value="Visible" />
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
                 </Grid.Style>
                 <TextBlock
                     Grid.Row="0"
-                    HorizontalAlignment="Center"
                     Margin="20"
+                    HorizontalAlignment="Center"
                     FontSize="50"
                     Text="Please Select a Username" />
             </Grid>
+
             <!--  Main Grid  -->
-            <!-- User Selected = False -->
+            <!--  User Selected = False  -->
             <Grid Grid.IsSharedSizeScope="True">
                 <Grid.Style>
                     <Style TargetType="Grid">
-                        <Setter Property="Visibility" Value="Collapsed"/>
+                        <Setter Property="Visibility" Value="Collapsed" />
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding HasSelectedFriend}" Value="True">
-                                <Setter Property="Visibility" Value="Visible"/>
+                                <Setter Property="Visibility" Value="Visible" />
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
                 </Grid.Style>
-                
+
                 <!--  3 Rows  -->
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
