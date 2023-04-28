@@ -18,6 +18,5 @@
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
     mc:Ignorable="d">
-    <views1:AddNewFriendView />
-    <!--<views:NintendoFriendsView />-->
+    <views:NintendoFriendsView DataContext="{Binding NintendoFriends}"/>
 </Window>
