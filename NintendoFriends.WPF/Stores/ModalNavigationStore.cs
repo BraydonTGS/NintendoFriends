@@ -17,6 +17,8 @@ namespace NintendoFriends.WPF.Stores
             }
         }
 
+        public bool IsOpen => _currentViewModel != null;
+
         public event Action CurrentViewModelChanged; 
 
     }

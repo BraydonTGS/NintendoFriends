@@ -144,7 +144,7 @@
                 Margin="10"
                 CornerRadius="25"
                 Cursor="Hand"
-                 MouseLeftButtonDown="{Binding CancelCommand}">
+                MouseLeftButtonDown="{Binding CancelCommand}">
                 <Border.Style>
                     <Style TargetType="Border">
                         <Setter Property="Background" Value="#E00012" />
@@ -166,7 +166,7 @@
             </Border>
 
             <!--  Submit Button  -->
-            <Border Style="{StaticResource ButtonTheme}" MouseLeftButtonDown="{Binding SubmitCommand}">
+            <Border MouseLeftButtonDown="{Binding SubmitCommand}" Style="{StaticResource ButtonTheme}">
                 <TextBlock
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
