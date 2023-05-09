@@ -7,7 +7,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     d:DesignHeight="320"
     d:DesignWidth="500"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    Background="Transparent">
 
     <Grid>
         <Grid.RowDefinitions>
@@ -143,8 +144,7 @@
                 Height="50"
                 Margin="10"
                 CornerRadius="25"
-                Cursor="Hand"
-                MouseLeftButtonDown="{Binding CancelCommand}">
+                Cursor="Hand">
                 <Border.Style>
                     <Style TargetType="Border">
                         <Setter Property="Background" Value="#E00012" />
@@ -166,7 +166,7 @@
             </Border>
 
             <!--  Submit Button  -->
-            <Border MouseLeftButtonDown="{Binding SubmitCommand}" Style="{StaticResource ButtonTheme}">
+            <Border Style="{StaticResource ButtonTheme}">
                 <TextBlock
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"

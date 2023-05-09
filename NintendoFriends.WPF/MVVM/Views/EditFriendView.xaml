@@ -8,8 +8,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     d:DesignHeight="450"
     d:DesignWidth="800"
+    Background="Transparent"
     mc:Ignorable="d">
-    <Border BorderThickness="5" CornerRadius="20">
+    <Border BorderThickness="5">
         <!--  Edit Window Border Brush Gradient  -->
         <Border.BorderBrush>
             <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">

@@ -64,6 +64,5 @@ namespace NintendoFriends.WPF.MVVM.ViewModels
         // Commands //
         public ICommand SubmitCommand { get; }
         public ICommand CancelCommand { get; }
-
     }
 }
