@@ -16,8 +16,6 @@ namespace NintendoFriends.WPF.MVVM.ViewModels
             _modalNavigationStore = modalNavigationStore;
             NintendoFriends = nintendoFriends;
             _modalNavigationStore.CurrentViewModelChanged += ModalNavigationStore_CurrentViewModelChanged;
-
-            _modalNavigationStore.CurrentViewModel = new AddFriendViewModel(); 
         }
 
         protected override void Dispose()

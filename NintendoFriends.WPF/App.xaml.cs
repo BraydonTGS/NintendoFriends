@@ -14,7 +14,7 @@ namespace NintendoFriends.WPF
         {
             _selectedStore = new SelectedFriendStore();
             _modalNavigationStore = new ModalNavigationStore();
-            _nintendoFriendViewModel = new NintendoFriendsViewModel(_selectedStore);
+            _nintendoFriendViewModel = new NintendoFriendsViewModel(_selectedStore, _modalNavigationStore);
         }
         protected override void OnStartup(StartupEventArgs e)
         {

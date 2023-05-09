@@ -54,6 +54,9 @@
 
             <!--  Login Button  -->
             <Border Style="{StaticResource ButtonTheme}">
+                <Border.InputBindings>
+                    <MouseBinding Command="{Binding AddNewFriendCommand}" Gesture="LeftClick" />
+                </Border.InputBindings>
                 <TextBlock
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
