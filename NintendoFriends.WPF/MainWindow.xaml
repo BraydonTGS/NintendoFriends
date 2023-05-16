@@ -5,8 +5,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:NintendoFriends.WPF"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:viewmodels="clr-namespace:NintendoFriends.WPF.MVVM.ViewModels"
-    xmlns:views="clr-namespace:NintendoFriends.WPF.Views"
+    xmlns:modal="clr-namespace:ModalControl;assembly=ModalControl"
+    xmlns:views="clr-namespace:NintendoFriends.WPF.MVVM.Views"
+    xmlns:views1="clr-namespace:NintendoFriends.WPF.Views"
+    xmlns:vms="clr-namespace:NintendoFriends.WPF.MVVM.ViewModels"
     Width="1000"
     Height="600"
     AllowsTransparency="True"
@@ -17,7 +19,19 @@
     WindowStartupLocation="CenterScreen"
     WindowStyle="None"
     mc:Ignorable="d">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type vms:AddFriendViewModel}">
+            <views:AddNewFriendView />
+        </DataTemplate>
+        <DataTemplate DataType="{x:Type vms:EditFriendViewModel}">
+            <views:EditFriendView />
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
-        <views:NintendoFriendsView />
+        <modal:Modal Panel.ZIndex="1" IsOpen="{Binding IsModalOpen}">
+            <ContentControl Background="Transparent" Content="{Binding CurrentModalViewModel}" />
+        </modal:Modal>
+        <views1:NintendoFriendsView DataContext="{Binding NintendoFriendsViewModel}" />
+
     </Grid>
 </Window>

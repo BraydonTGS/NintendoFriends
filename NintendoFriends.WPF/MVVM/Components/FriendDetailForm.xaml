@@ -1,0 +1,183 @@
+﻿<UserControl
+    x:Class="NintendoFriends.WPF.MVVM.Components.FriendDetailForm"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:NintendoFriends.WPF.MVVM.Components"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="320"
+    d:DesignWidth="500"
+    mc:Ignorable="d"
+    Background="Transparent">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <!--  Form for Adding and Editing a Nintendo Friend  -->
+        <Grid
+            Grid.Row="0"
+            Margin="10"
+            Grid.IsSharedSizeScope="True">
+
+            <!--  3 Rows  -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+
+            <!--  Username  -->
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="Label" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                    Grid.Column="0"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Text="Username" />
+                <TextBox
+                    Grid.Column="1"
+                    Width="300"
+                    Margin="20,0,0,0"
+                    Background="Transparent"
+                    BorderThickness="0,0,0,5"
+                    CaretBrush="#00A1DC"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Text="{Binding Username}" />
+            </Grid>
+
+            <!--  Best Friend  -->
+            <Grid Grid.Row="1" Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="Label" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock
+                    Grid.Column="0"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Text="Best Friend?" />
+                <TextBox
+                    Grid.Column="1"
+                    Width="300"
+                    Margin="20,0,0,0"
+                    Background="Transparent"
+                    BorderThickness="0,0,0,5"
+                    CaretBrush="#00A1DC"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Text="{Binding IsBestFriend}" />
+            </Grid>
+
+            <!--  Online  -->
+            <Grid Grid.Row="2" Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="Label" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Grid.Column="0"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Text="Online?" />
+                <TextBox
+                    Grid.Column="1"
+                    Width="300"
+                    Margin="20,0,0,0"
+                    Background="Transparent"
+                    BorderThickness="0,0,0,5"
+                    CaretBrush="#00A1DC"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Text="{Binding IsOnline}" />
+
+            </Grid>
+
+            <!--  Favorite Game  -->
+            <Grid Grid.Row="3" Margin="0,20,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" SharedSizeGroup="Label" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock
+                    Grid.Column="0"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Text="Favorite Game?" />
+                <TextBox
+                    Grid.Column="1"
+                    Width="300"
+                    Margin="20,0,0,0"
+                    Background="Transparent"
+                    BorderThickness="0,0,0,5"
+                    CaretBrush="LightBlue"
+                    FontSize="25"
+                    FontWeight="Bold"
+                    Text="{Binding FavoriteGame}" />
+            </Grid>
+        </Grid>
+
+        <StackPanel
+            Grid.Row="1"
+            Margin="10"
+            VerticalAlignment="Center"
+            Orientation="Horizontal">
+
+            <!--  Cancel Button  -->
+            <Border
+                x:Name="btnClose"
+                Width="100"
+                Height="50"
+                Margin="10"
+                CornerRadius="25"
+                Cursor="Hand">
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="#E00012" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="Black" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    Text="Cancel" />
+            </Border>
+
+            <!--  Submit Button  -->
+            <Border Style="{StaticResource ButtonTheme}">
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Background="Transparent"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Foreground="White"
+                    IsEnabled="{Binding CanSubmit}"
+                    Text="Submit" />
+            </Border>
+
+        </StackPanel>
+    </Grid>
+</UserControl>
